@@ -1,7 +1,6 @@
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(30, 64, 175, 0.8), rgba(30, 64, 175, 0.8)), 
-                url('https://placehold.co/1200x600/1e40af/FFFFFF/png?text=Electronics+Repair') center/cover no-repeat;
+    background: linear-gradient(rgba(30, 64, 175, 0.8), rgba(30, 64, 175, 0.8));
     color: white;
     padding: 4rem 0;
     text-align: center;
