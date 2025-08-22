@@ -1,0 +1,210 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home - Laxmi Electronics and Electricals{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/home/home.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Your One-Stop Solution for Electronics & Electricals</h1>
+            <p>Repair, Projects & Sales - All Under One Roof</p>
+            <div class="hero-buttons">
+                <a href="{% url 'services' %}" class="btn btn-primary">Request Repair</a>
+                <a href="{% url 'products' %}" class="btn btn-secondary">Shop Products</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features">
+    <div class="container">
+        <h2 class="section-title">Why Choose Laxmi Electronics?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🔧</div>
+                <h3>Expert Repair Services</h3>
+                <p>We repair all electronics - Mixers, Coolers, TVs, Fans, and more with expert technicians.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📡</div>
+                <h3>DTH Receivers</h3>
+                <p>Wholesale and retail DTH receivers with the best prices in Raipur.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💡</div>
+                <h3>Student Projects</h3>
+                <p>Get components and guidance for your Arduino and electronics projects.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🖥️</div>
+                <h3>Quality Products</h3>
+                <p>New and refurbished electronics at affordable prices with warranty.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Preview -->
+<section class="services-preview">
+    <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Electronic Repairs</h3>
+                <ul>
+                    <li>Mixer Repair</li>
+                    <li>Cooler Repair</li>
+                    <li>LED TV Repair</li>
+                    <li>Iron Repair</li>
+                    <li>Fan Repair</li>
+                    <li>Induction Cooker Repair</li>
+                </ul>
+                <a href="{% url 'services' %}" class="btn btn-outline">View All Services</a>
+            </div>
+            <div class="service-card">
+                <h3>Student Projects</h3>
+                <p>We provide components and guidance for:</p>
+                <ul>
+                    <li>Arduino Projects</li>
+                    <li>IoT Devices</li>
+                    <li>Sensor Circuits</li>
+                    <li>DIY Electronics</li>
+                </ul>
+                <a href="{% url 'projects' %}" class="btn btn-outline">Project Support</a>
+            </div>
+            <div class="service-card">
+                <h3>Product Sales</h3>
+                <p>We offer a wide range of products:</p>
+                <ul>
+                    <li>New LED TVs</li>
+                    <li>Refurbished Electronics</li>
+                    <li>DTH Receivers (Wholesale)</li>
+                    <li>Home Appliances</li>
+                </ul>
+                <a href="{% url 'products' %}" class="btn btn-outline">Browse Products</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Products -->
+<section class="featured-products">
+    <div class="container">
+        <h2 class="section-title">Featured Products</h2>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://placehold.co/300x200/3B82F6/FFFFFF/png?text=DTH+Receiver" alt="DTH Receiver">
+                </div>
+                <div class="product-info">
+                    <h3>DTH Receivers</h3>
+                    <p>Available for wholesale and retail with best prices</p>
+                    <a href="{% url 'products' %}" class="btn btn-outline">Enquire Now</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://placehold.co/300x200/3B82F6/FFFFFF/png?text=LED+TV" alt="LED TV">
+                </div>
+                <div class="product-info">
+                    <h3>LED TVs</h3>
+                    <p>New and refurbished LED TVs with warranty</p>
+                    <a href="{% url 'products' %}" class="btn btn-outline">Enquire Now</a>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="https://placehold.co/300x200/3B82F6/FFFFFF/png?text=Arduino" alt="Arduino Components">
+                </div>
+                <div class="product-info">
+                    <h3>Arduino Components</h3>
+                    <p>Sensors, boards and accessories for student projects</p>
+                    <a href="{% url 'projects' %}" class="btn btn-outline">Enquire Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials">
+    <div class="container">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>"Got my mixer repaired quickly at a reasonable price. Highly recommended!"</p>
+                </div>
+                <div class="testimonial-author">
+                    <h4>Rita Sharma</h4>
+                    <p>Gudhiyari, Raipur</p>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>"Purchased DTH receivers in bulk for my business. Great quality and pricing."</p>
+                </div>
+                <div class="testimonial-author">
+                    <h4>Rajesh Gupta</h4>
+                    <p>Wholesale Customer</p>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>"They helped me complete my college project with components and guidance."</p>
+                </div>
+                <div class="testimonial-author">
+                    <h4>Vikram Patel</h4>
+                    <p>Engineering Student</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Location Section -->
+<section class="location">
+    <div class="container">
+        <h2 class="section-title">Visit Our Store</h2>
+        <div class="location-content">
+            <div class="location-info">
+                <h3>Laxmi Electronics and Electricals</h3>
+                <p>Near Durga Chowk, Gudhiyari, Raipur, Chhattisgarh</p>
+                <div class="contact-details">
+                    <p><strong>Phone:</strong> +91 XXXXX XXXXX</p>
+                    <p><strong>Hours:</strong> Mon-Sat 10AM-8PM</p>
+                </div>
+                <a href="{% url 'contact' %}" class="btn btn-primary">Get Directions</a>
+            </div>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <p>Google Maps Embed</p>
+                    <p>Near Durga Chowk, Gudhiyari, Raipur</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="cta">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Have an Electronics Issue or Project Need?</h2>
+            <p>Contact us today for reliable service and support</p>
+            <a href="{% url 'contact' %}" class="btn btn-large">Contact Us Now</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{% static 'js/home/home.js' %}"></script>
+{% endblock %}

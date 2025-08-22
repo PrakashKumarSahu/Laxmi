@@ -1,0 +1,289 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Products - Laxmi Electronics and Electricals{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/products/products.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- Products Header -->
+<section class="products-header">
+    <div class="container">
+        <h1>Our Products</h1>
+        <p>Discover our range of new, refurbished, and wholesale electronics</p>
+    </div>
+</section>
+
+<!-- Product Filters -->
+<section class="product-filters">
+    <div class="container">
+        <div class="filter-options">
+            <button class="filter-btn active" data-filter="all">All Products</button>
+            <button class="filter-btn" data-filter="new">New Items</button>
+            <button class="filter-btn" data-filter="refurbished">Refurbished</button>
+            <button class="filter-btn" data-filter="wholesale">Wholesale</button>
+            <button class="filter-btn" data-filter="dth">DTH Receivers</button>
+        </div>
+        
+        <div class="search-sort">
+            <div class="search-box">
+                <input type="text" id="product-search" placeholder="Search products...">
+                <button class="search-btn">🔍</button>
+            </div>
+            <select id="sort-products">
+                <option value="name">Sort by Name</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+            </select>
+        </div>
+    </div>
+</section>
+
+<!-- Products Grid -->
+<section class="products-grid-section">
+    <div class="container">
+        <div class="products-grid" id="products-container">
+            <!-- New Products -->
+            <div class="product-card" data-category="new" data-price="12000">
+                <div class="product-image">
+                    <img src="https://placehold.co/300x200/3B82F6/FFFFFF/png?text=New+LED+TV" alt="New LED TV">
+                    <span class="product-badge new">New</span>
+                </div>
+                <div class="product-info">
+                    <h3>32-inch LED TV</h3>
+                    <p class="product-category">Televisions</p>
+                    <p class="product-desc">Brand new HD ready LED TV with 1 year warranty</p>
+                    <div class="product-meta">
+                        <span class="price">₹12,000</span>
+                        <span class="stock in-stock">In Stock</span>
+                    </div>
+                    <button class="btn btn-enquire" data-product="32-inch LED TV">Enquire Now</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="new" data-price="2500">
+                <div class="product-image">
+                    <img src="https://placehold.co/300x200/3B82F6/FFFFFF/png?text=Mixer+Grinder" alt="Mixer Grinder">
+                    <span class="product-badge new">New</span>
+                </div>
+                <div class="product-info">
+                    <h3>Mixer Grinder</h3>
+                    <p class="product-category">Kitchen Appliances</p>
+                    <p class="product-desc">3-jar mixer grinder with 500W motor</p>
+                    <div class="product-meta">
+                        <span class="price">₹2,500</span>
+                        <span class="stock in-stock">In Stock</span>
+                    </div>
+                    <button class="btn btn-enquire" data-product="Mixer Grinder">Enquire Now</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="new" data-price="1800">
+                <div class="product-image">
+                    <img src="https://placehold.co/300x200/3B82F6/FFFFFF/png?text=Table+Fan" alt="Table Fan">
+                    <span class="product-badge new">New</span>
+                </div>
+                <div class="product-info">
+                    <h3>Table Fan</h3>
+                    <p class="product-category">Fans</p>
+                    <p class="product-desc">Energy efficient 400mm table fan</p>
+                    <div class="product-meta">
+                        <span class="price">₹1,800</span>
+                        <span class="stock in-stock">In Stock</span>
+                    </div>
+                    <button class="btn btn-enquire" data-product="Table Fan">Enquire Now</button>
+                </div>
+            </div>
+
+            <!-- Refurbished Products -->
+            <div class="product-card" data-category="refurbished" data-price="7000">
+                <div class="product-image">
+                    <img src="https://placehold.co/300x200/3B82F6/FFFFFF/png?text=Refurb+TV" alt="Refurbished LED TV">
+                    <span class="product-badge refurbished">Refurbished</span>
+                </div>
+                <div class="product-info">
+                    <h3>Refurbished 32-inch LED TV</h3>
+                    <p class="product-category">Televisions</p>
+                    <p class="product-desc">Professionally refurbished with 6 months warranty</p>
+                    <div class="product-meta">
+                        <span class="price">₹7,000</span>
+                        <span class="stock in-stock">In Stock</span>
+                    </div>
+                    <button class="btn btn-enquire" data-product="Refurbished 32-inch LED TV">Enquire Now</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="refurbished" data-price="1200">
+                <div class="product-image">
+                    <img src="https://placehold.co/300x200/3B82F6/FFFFFF/png?text=Refurb+Mixer" alt="Refurbished Mixer">
+                    <span class="product-badge refurbished">Refurbished</span>
+                </div>
+                <div class="product-info">
+                    <h3>Refurbished Mixer</h3>
+                    <p class="product-category">Kitchen Appliances</p>
+                    <p class="product-desc">Fully serviced and tested mixer grinder</p>
+                    <div class="product-meta">
+                        <span class="price">₹1,200</span>
+                        <span class="stock low-stock">Low Stock</span>
+                    </div>
+                    <button class="btn btn-enquire" data-product="Refurbished Mixer">Enquire Now</button>
+                </div>
+            </div>
+
+            <!-- Wholesale Products -->
+            <div class="product-card" data-category="wholesale dth" data-price="1500">
+                <div class="product-image">
+                    <img src="https://placehold.co/300x200/3B82F6/FFFFFF/png?text=DTH+Receiver" alt="DTH Receiver">
+                    <span class="product-badge wholesale">Wholesale</span>
+                </div>
+                <div class="product-info">
+                    <h3>DTH Receiver (Bulk)</h3>
+                    <p class="product-category">DTH Systems</p>
+                    <p class="product-desc">HD DTH receivers available for wholesale</p>
+                    <div class="product-meta">
+                        <span class="price">₹1,500/unit</span>
+                        <span class="stock in-stock">In Stock</span>
+                    </div>
+                    <button class="btn btn-enquire" data-product="DTH Receiver (Bulk)">Enquire Now</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="wholesale dth" data-price="1800">
+                <div class="product-image">
+                    <img src="https://placehold.co/300x200/3B82F6/FFFFFF/png?text=DTH+HD" alt="DTH HD Receiver">
+                    <span class="product-badge wholesale">Wholesale</span>
+                </div>
+                <div class="product-info">
+                    <h3>DTH HD Receiver</h3>
+                    <p class="product-category">DTH Systems</p>
+                    <p class="product-desc">High definition DTH receivers for bulk orders</p>
+                    <div class="product-meta">
+                        <span class="price">₹1,800/unit</span>
+                        <span class="stock in-stock">In Stock</span>
+                    </div>
+                    <button class="btn btn-enquire" data-product="DTH HD Receiver">Enquire Now</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="new" data-price="3500">
+                <div class="product-image">
+                    <img src="https://placehold.co/300x200/3B82F6/FFFFFF/png?text=Induction+Cooker" alt="Induction Cooker">
+                    <span class="product-badge new">New</span>
+                </div>
+                <div class="product-info">
+                    <h3>Induction Cooker</h3>
+                    <p class="product-category">Kitchen Appliances</p>
+                    <p class="product-desc">2000W induction cooker with touch controls</p>
+                    <div class="product-meta">
+                        <span class="price">₹3,500</span>
+                        <span class="stock in-stock">In Stock</span>
+                    </div>
+                    <button class="btn btn-enquire" data-product="Induction Cooker">Enquire Now</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="pagination">
+            <button class="pagination-btn active">1</button>
+            <button class="pagination-btn">2</button>
+            <button class="pagination-btn">3</button>
+            <button class="pagination-btn next">Next →</button>
+        </div>
+    </div>
+</section>
+
+<!-- Product Enquiry Modal -->
+<div id="enquiry-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Product Enquiry</h2>
+        <p>Enquire about: <span id="enquiry-product-name"></span></p>
+        <form id="enquiry-form">
+            <div class="form-group">
+                <label for="enquiry-name">Your Name</label>
+                <input type="text" id="enquiry-name" required>
+            </div>
+            <div class="form-group">
+                <label for="enquiry-phone">Phone Number</label>
+                <input type="tel" id="enquiry-phone" required>
+            </div>
+            <div class="form-group">
+                <label for="enquiry-message">Message (Optional)</label>
+                <textarea id="enquiry-message" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="enquiry-quantity">Quantity</label>
+                <input type="number" id="enquiry-quantity" min="1" value="1">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Enquiry</button>
+        </form>
+    </div>
+</div>
+
+<!-- Wholesale Section -->
+<section class="wholesale-section">
+    <div class="container">
+        <div class="wholesale-content">
+            <div class="wholesale-info">
+                <h2>Wholesale DTH Receivers</h2>
+                <p>We specialize in bulk supply of DTH receivers at competitive prices. Whether you're a retailer or need multiple units for your business, we offer the best deals in Raipur.</p>
+                <ul>
+                    <li>Competitive wholesale pricing</li>
+                    <li>Bulk discounts available</li>
+                    <li>All major brands available</li>
+                    <li>Delivery options</li>
+                </ul>
+                <a href="{% url 'contact' %}" class="btn btn-large">Contact for Wholesale</a>
+            </div>
+            <div class="wholesale-image">
+                <img src="https://placehold.co/400x300/3B82F6/FFFFFF/png?text=Wholesale+DTH" alt="Wholesale DTH">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Product Categories -->
+<section class="categories-section">
+    <div class="container">
+        <h2 class="section-title">Product Categories</h2>
+        <div class="categories-grid">
+            <div class="category-card">
+                <div class="category-icon">📺</div>
+                <h3>Televisions</h3>
+                <p>LED, Smart TVs, and more</p>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">🍳</div>
+                <h3>Kitchen Appliances</h3>
+                <p>Mixers, Induction Cookers</p>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">🌬️</div>
+                <h3>Fans & Coolers</h3>
+                <p>Table fans, ceiling fans, coolers</p>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">📡</div>
+                <h3>DTH Systems</h3>
+                <p>Receivers and accessories</p>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">🔧</div>
+                <h3>Repair Services</h3>
+                <p>For all electronics</p>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">💡</div>
+                <h3>Project Components</h3>
+                <p>Arduino, sensors, and more</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{% static 'js/products/products.js' %}"></script>
+{% endblock %}

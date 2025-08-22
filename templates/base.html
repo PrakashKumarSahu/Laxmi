@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Laxmi Electronics and Electricals{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <script src="{% static 'js/base.js' %}" defer></script>
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo-container">
+                <a href="{% url 'home' %}" class="logo">Laxmi Electronics</a>
+                <p class="location">Near Durga Chowk, Gudhiyari, Raipur</p>
+            </div>
+            
+            <nav class="desktop-nav">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="{% url 'services' %}">Services</a>
+                <a href="{% url 'projects' %}">Projects</a>
+                <a href="{% url 'products' %}">Products</a>
+                <a href="{% url 'about' %}">About Us</a>
+                <a href="{% url 'contact' %}">Contact</a>
+            </nav>
+            
+            <button id="mobile-menu-button" class="mobile-menu-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <nav id="mobile-menu" class="mobile-nav">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'services' %}">Services</a>
+            <a href="{% url 'projects' %}">Projects</a>
+            <a href="{% url 'products' %}">Products</a>
+            <a href="{% url 'about' %}">About Us</a>
+            <a href="{% url 'contact' %}">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h3>Laxmi Electronics & Electricals</h3>
+                    <p>Near Durga Chowk, Gudhiyari</p>
+                    <p>Raipur, Chhattisgarh</p>
+                    <p>Your trusted partner for all electronics needs</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="{% url 'services' %}">Services</a>
+                    <a href="{% url 'products' %}">Products</a>
+                    <a href="{% url 'projects' %}">Student Projects</a>
+                    <a href="{% url 'contact' %}">Contact Us</a>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>Phone: +91 XXXXX XXXXX</p>
+                    <p>Email: info@laxmielectronics.com</p>
+                    <p>Hours: Mon-Sat 10AM-8PM</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">WhatsApp</a>
+                        <a href="#" class="social-link">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Laxmi Electronics and Electricals. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    {% block extra_scripts %}{% endblock %}
+</body>
+</html>
