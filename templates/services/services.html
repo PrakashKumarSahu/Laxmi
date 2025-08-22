@@ -1,0 +1,375 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Services - Laxmi Electronics and Electricals{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/services/services.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- Services Header -->
+<section class="services-header">
+    <div class="container">
+        <h1>Our Repair Services</h1>
+        <p>Expert repair services for all your electronics and electrical appliances</p>
+    </div>
+</section>
+
+<!-- Services Intro -->
+<section class="services-intro">
+    <div class="container">
+        <div class="intro-content">
+            <div class="intro-text">
+                <h2>Professional Electronics Repair</h2>
+                <p>With years of experience in electronics repair, we provide reliable and affordable service for all types of electronic devices. Our skilled technicians use quality parts and modern equipment to ensure your devices are repaired to the highest standard.</p>
+                <div class="intro-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">🔧</span>
+                        <span>Expert technicians</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">⏱️</span>
+                        <span>Quick turnaround</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">💰</span>
+                        <span>Affordable pricing</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🔍</span>
+                        <span>Thorough diagnostics</span>
+                    </div>
+                </div>
+            </div>
+            <div class="intro-image">
+                <img src="https://placehold.co/400x300/3B82F6/FFFFFF/png?text=Electronics+Repair" alt="Electronics Repair">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Grid -->
+<section class="services-grid-section">
+    <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <!-- TV Repair -->
+            <div class="service-card" data-service="tv">
+                <div class="service-icon">📺</div>
+                <h3>LED/LCD TV Repair</h3>
+                <p>Professional repair services for all brands of LED and LCD televisions</p>
+                <ul>
+                    <li>Screen replacement</li>
+                    <li>Power supply issues</li>
+                    <li>Backlight problems</li>
+                    <li>Motherboard repair</li>
+                </ul>
+                <button class="btn btn-service-details" data-service="TV Repair">Service Details</button>
+            </div>
+
+            <!-- Mixer Repair -->
+            <div class="service-card" data-service="mixer">
+                <div class="service-icon">🍳</div>
+                <h3>Mixer/Grinder Repair</h3>
+                <p>Comprehensive repair for mixer grinders and food processors</p>
+                <ul>
+                    <li>Motor winding</li>
+                    <li>Switch replacement</li>
+                    <li>Jar repair</li>
+                    <li>Speed control issues</li>
+                </ul>
+                <button class="btn btn-service-details" data-service="Mixer Repair">Service Details</button>
+            </div>
+
+            <!-- Fan Repair -->
+            <div class="service-card" data-service="fan">
+                <div class="service-icon">🌬️</div>
+                <h3>Fan Repair</h3>
+                <p>Repair services for ceiling, table, and exhaust fans</p>
+                <ul>
+                    <li>Capacitor replacement</li>
+                    <li>Motor repair</li>
+                    <li>Speed control</li>
+                    <li>Blade balancing</li>
+                </ul>
+                <button class="btn btn-service-details" data-service="Fan Repair">Service Details</button>
+            </div>
+
+            <!-- Iron Repair -->
+            <div class="service-card" data-service="iron">
+                <div class="service-icon">🧵</div>
+                <h3>Iron Repair</h3>
+                <p>Repair for all types of electric irons</p>
+                <ul>
+                    <li>Element replacement</li>
+                    <li>Thermostat repair</li>
+                    <li>Indicator light issues</li>
+                    <li>Cord replacement</li>
+                </ul>
+                <button class="btn btn-service-details" data-service="Iron Repair">Service Details</button>
+            </div>
+
+            <!-- Cooler Repair -->
+            <div class="service-card" data-service="cooler">
+                <div class="service-icon">❄️</div>
+                <h3>Air Cooler Repair</h3>
+                <p>Comprehensive repair for desert and personal air coolers</p>
+                <ul>
+                    <li>Motor repair</li>
+                    <li>Pump replacement</li>
+                    <li>Panel control issues</li>
+                    <li>Water leakage problems</li>
+                </ul>
+                <button class="btn btn-service-details" data-service="Cooler Repair">Service Details</button>
+            </div>
+
+            <!-- Induction Repair -->
+            <div class="service-card" data-service="induction">
+                <div class="service-icon">🔥</div>
+                <h3>Induction Cooker Repair</h3>
+                <p>Expert repair for induction cooktops</p>
+                <ul>
+                    <li>IGBT replacement</li>
+                    <li>Display issues</li>
+                    <li>Heating problems</li>
+                    <li>Power supply repair</li>
+                </ul>
+                <button class="btn btn-service-details" data-service="Induction Repair">Service Details</button>
+            </div>
+
+            <!-- Power Supply -->
+            <div class="service-card" data-service="power">
+                <div class="service-icon">⚡</div>
+                <h3>Power Supply Repair</h3>
+                <p>Repair for SMPS, adapters, and power banks</p>
+                <ul>
+                    <li>Voltage regulation</li>
+                    <li>Component replacement</li>
+                    <li>Charging circuit repair</li>
+                    <li>Battery replacement</li>
+                </ul>
+                <button class="btn btn-service-details" data-service="Power Supply Repair">Service Details</button>
+            </div>
+
+            <!-- General Electronics -->
+            <div class="service-card" data-service="general">
+                <div class="service-icon">🔌</div>
+                <h3>General Electronics</h3>
+                <p>Repair for various electronic devices and gadgets</p>
+                <ul>
+                    <li>Remote controls</li>
+                    <li>Audio equipment</li>
+                    <li>Charging devices</li>
+                    <li>Small appliances</li>
+                </ul>
+                <button class="btn btn-service-details" data-service="General Electronics Repair">Service Details</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Process -->
+<section class="service-process">
+    <div class="container">
+        <h2 class="section-title">Our Service Process</h2>
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h3>Diagnosis</h3>
+                <p>We thoroughly diagnose your device to identify the exact issue</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h3>Quotation</h3>
+                <p>We provide a transparent cost estimate before starting any work</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h3>Repair</h3>
+                <p>Our technicians perform the repair using quality components</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">4</div>
+                <h3>Testing</h3>
+                <p>We thoroughly test the device to ensure proper functionality</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">5</div>
+                <h3>Delivery</h3>
+                <p>Your repaired device is returned with warranty on our service</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="pricing-section">
+    <div class="container">
+        <h2 class="section-title">Service Pricing</h2>
+        <div class="pricing-notes">
+            <p>Note: The prices below are starting prices. Final cost may vary based on the specific issue and parts required.</p>
+        </div>
+        <div class="pricing-table">
+            <div class="pricing-row">
+                <div class="pricing-service">TV Repair</div>
+                <div class="pricing-cost">Starting from ₹500</div>
+            </div>
+            <div class="pricing-row">
+                <div class="pricing-service">Mixer/Grinder Repair</div>
+                <div class="pricing-cost">Starting from ₹200</div>
+            </div>
+            <div class="pricing-row">
+                <div class="pricing-service">Fan Repair</div>
+                <div class="pricing-cost">Starting from ₹150</div>
+            </div>
+            <div class="pricing-row">
+                <div class="pricing-service">Iron Repair</div>
+                <div class="pricing-cost">Starting from ₹100</div>
+            </div>
+            <div class="pricing-row">
+                <div class="pricing-service">Cooler Repair</div>
+                <div class="pricing-cost">Starting from ₹300</div>
+            </div>
+            <div class="pricing-row">
+                <div class="pricing-service">Induction Cooker Repair</div>
+                <div class="pricing-cost">Starting from ₹250</div>
+            </div>
+            <div class="pricing-row">
+                <div class="pricing-service">Power Supply Repair</div>
+                <div class="pricing-cost">Starting from ₹150</div>
+            </div>
+            <div class="pricing-row">
+                <div class="pricing-service">General Electronics Repair</div>
+                <div class="pricing-cost">Starting from ₹100</div>
+            </div>
+        </div>
+        <div class="pricing-footer">
+            <p>*Diagnosis charges: ₹50 (waived if repair is done at our shop)</p>
+        </div>
+    </div>
+</section>
+
+<!-- Service Booking -->
+<section class="service-booking">
+    <div class="container">
+        <div class="booking-content">
+            <div class="booking-text">
+                <h2>Book a Repair Service</h2>
+                <p>Fill out the form below to schedule your repair service. We'll contact you to confirm the details.</p>
+                <div class="booking-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">📞</span>
+                        <span>Quick response</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🚗</span>
+                        <span>Pickup & delivery available</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🛡️</span>
+                        <span>Service warranty</span>
+                    </div>
+                </div>
+            </div>
+            <div class="booking-form">
+                <form id="repair-form">
+                    <div class="form-group">
+                        <label for="customer-name">Your Name</label>
+                        <input type="text" id="customer-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="customer-phone">Phone Number</label>
+                        <input type="tel" id="customer-phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="customer-email">Email (Optional)</label>
+                        <input type="email" id="customer-email">
+                    </div>
+                    <div class="form-group">
+                        <label for="service-type">Service Required</label>
+                        <select id="service-type" required>
+                            <option value="">Select a service</option>
+                            <option value="tv">TV Repair</option>
+                            <option value="mixer">Mixer/Grinder Repair</option>
+                            <option value="fan">Fan Repair</option>
+                            <option value="iron">Iron Repair</option>
+                            <option value="cooler">Cooler Repair</option>
+                            <option value="induction">Induction Cooker Repair</option>
+                            <option value="power">Power Supply Repair</option>
+                            <option value="general">General Electronics Repair</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="device-details">Device Details</label>
+                        <input type="text" id="device-details" required placeholder="Brand, model, etc.">
+                    </div>
+                    <div class="form-group">
+                        <label for="issue-description">Issue Description</label>
+                        <textarea id="issue-description" rows="3" required placeholder="Describe the problem you're experiencing..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="preferred-date">Preferred Date</label>
+                        <input type="date" id="preferred-date">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Book Repair Service</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h3>How long does a typical repair take?</h3>
+                <p>Most repairs are completed within 1-3 days, depending on the complexity of the issue and parts availability.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Do you offer warranty on repairs?</h3>
+                <p>Yes, we offer a 30-day warranty on all our repair services for the same issue.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Can you repair devices at my home?</h3>
+                <p>For most repairs, we need to bring the device to our workshop. However, we offer pickup and delivery services for larger items.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>What if my device can't be repaired?</h3>
+                <p>If we determine that repair is not feasible, we'll inform you before proceeding and there will be no charge for the diagnosis.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>Do you use genuine parts?</h3>
+                <p>We use high-quality parts from reputable suppliers. For critical components, we can source OEM parts if requested.</p>
+            </div>
+
+            <div class="faq-item">
+                <h3>What are your service hours?</h3>
+                <p>We're open Monday to Saturday, 10 AM to 8 PM. You can bring devices for repair during these hours.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Modal -->
+<div id="service-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2 id="modal-service-title">Service Details</h2>
+        <div id="modal-service-content">
+            <!-- Content will be loaded dynamically -->
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{% static 'js/services/services.js' %}"></script>
+{% endblock %}

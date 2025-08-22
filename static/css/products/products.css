@@ -1,7 +1,8 @@
 /* Products Header */
 .products-header {
-    background: linear-gradient(rgba(30, 64, 175, 0.9), rgba(30, 64, 175, 0.9)), 
-                url('https://placehold.co/1200x300/1e40af/FFFFFF/png?text=Electronics+Products') center/cover no-repeat;
+    /* background: linear-gradient(rgba(30, 64, 175, 0.9), rgba(30, 64, 175, 0.9)), 
+                url('https://placehold.co/1200x300/1e40af/FFFFFF/png?text=Electronics+Products') center/cover no-repeat; */
+                background: linear-gradient(rgba(30, 64, 175, 0.9), rgba(30, 64, 175, 0.9));
     color: white;
     padding: 3rem 0;
     text-align: center;

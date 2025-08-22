@@ -1,0 +1,435 @@
+/* Projects Header */
+.projects-header {
+    /* background: linear-gradient(rgba(30, 64, 175, 0.9), rgba(30, 64, 175, 0.9)), 
+                url('https://placehold.co/1200x300/1e40af/FFFFFF/png?text=Electronics+Projects') center/cover no-repeat; */
+    background: linear-gradient(rgba(30, 64, 175, 0.9), rgba(30, 64, 175, 0.9));
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.projects-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.projects-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Projects Intro */
+.projects-intro {
+    padding: 4rem 0;
+}
+
+.intro-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.intro-text h2 {
+    color: #1e40af;
+    margin-bottom: 1rem;
+}
+
+.intro-features {
+    margin-top: 1.5rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.feature-icon {
+    font-size: 1.5rem;
+    margin-right: 0.75rem;
+}
+
+.intro-image {
+    text-align: center;
+}
+
+.intro-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Categories */
+.project-categories {
+    padding: 4rem 0;
+    background-color: #f8fafc;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.category-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.category-card h3 {
+    color: #1e40af;
+    margin-bottom: 0.5rem;
+}
+
+.category-card p {
+    color: #64748b;
+}
+
+/* Components Section */
+.components-section {
+    padding: 4rem 0;
+}
+
+.section-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.components-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.components-filter .filter-btn {
+    padding: 0.5rem 1rem;
+    background: white;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.components-filter .filter-btn:hover {
+    background: #e5e7eb;
+}
+
+.components-filter .filter-btn.active {
+    background: #3b82f6;
+    color: white;
+    border-color: #3b82f6;
+}
+
+.components-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+.component-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.component-card:hover {
+    transform: translateY(-5px);
+}
+
+.component-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.component-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.component-info {
+    padding: 1.5rem;
+}
+
+.component-info h3 {
+    color: #1e40af;
+    margin-bottom: 0.5rem;
+}
+
+.component-desc {
+    margin-bottom: 1rem;
+    color: #64748b;
+}
+
+.component-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-weight: bold;
+    color: #1e40af;
+    font-size: 1.2rem;
+}
+
+.stock {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+.stock.in-stock {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.stock.low-stock {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.stock.out-of-stock {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* Kits Section */
+.kits-section {
+    padding: 4rem 0;
+    background-color: #f8fafc;
+}
+
+.kits-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.kit-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.kit-image {
+    height: 200px;
+    overflow: hidden;
+}
+
+.kit-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.kit-info {
+    padding: 1.5rem;
+}
+
+.kit-info h3 {
+    color: #1e40af;
+    margin-bottom: 0.5rem;
+}
+
+.kit-desc {
+    margin-bottom: 1rem;
+    color: #64748b;
+}
+
+.kit-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* Guidance Section */
+.guidance-section {
+    padding: 4rem 0;
+}
+
+.guidance-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.guidance-text h2 {
+    color: #1e40af;
+    margin-bottom: 1rem;
+}
+
+.guidance-text ul {
+    list-style-type: none;
+    margin: 1.5rem 0;
+}
+
+.guidance-text li {
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.guidance-text li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #10b981;
+}
+
+.guidance-image {
+    text-align: center;
+}
+
+.guidance-image img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Request Form */
+.project-request {
+    padding: 4rem 0;
+    background-color: #f8fafc;
+}
+
+.request-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 4rem 0;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.faq-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h3 {
+    color: #1e40af;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (min-width: 640px) {
+    .components-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .kits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .form-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .intro-content {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .guidance-content {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .categories-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .faq-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .components-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .kits-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .categories-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+    
+    .section-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

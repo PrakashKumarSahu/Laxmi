@@ -58,6 +58,11 @@ h1, h2, h3, h4, h5, h6 {
     text-decoration: none;
 }
 
+.logo-image {
+    height: 100px;   /* or 40px, depending on your navbar */
+    width: auto;    /* keeps aspect ratio */
+}
+
 .location {
     font-size: 0.75rem;
     margin-top: 0.25rem;

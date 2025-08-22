@@ -14,9 +14,14 @@
     <header class="header">
         <div class="container header-container">
             <div class="logo-container">
-                <a href="{% url 'home' %}" class="logo">Laxmi Electronics</a>
-                <p class="location">Near Durga Chowk, Gudhiyari, Raipur</p>
+                <!-- <a href="{% url 'home' %}" class="logo">Laxmi Electronics</a> -->
+                <a href="{% url 'home:home' %}">
+                    <img src="{% static 'images/logo.png' %}" alt="Logo" class="logo-image"/>
+                </a>
+
+                <!-- <p class="location">Near Durga Chowk, Gudhiyari, Raipur</p> -->
             </div>
+
             
             <nav class="desktop-nav">
                 <a href="{% url 'home' %}">Home</a>

@@ -1,0 +1,392 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Projects - Laxmi Electronics and Electricals{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/projects/projects.css' %}">
+{% endblock %}
+
+{% block content %}
+<!-- Projects Header -->
+<section class="projects-header">
+    <div class="container">
+        <h1>Electronics Projects & Components</h1>
+        <p>Supporting students and hobbyists with components, kits, and guidance for electronics projects</p>
+    </div>
+</section>
+
+<!-- Projects Intro -->
+<section class="projects-intro">
+    <div class="container">
+        <div class="intro-content">
+            <div class="intro-text">
+                <h2>Your Project Partner</h2>
+                <p>At Laxmi Electronics, we understand the challenges students face when working on electronics projects. We provide all the components, tools, and guidance you need to successfully complete your academic projects.</p>
+                <div class="intro-features">
+                    <div class="feature-item">
+                        <span class="feature-icon">⚡</span>
+                        <span>Wide range of components</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🔧</span>
+                        <span>Expert technical guidance</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">💰</span>
+                        <span>Student-friendly prices</span>
+                    </div>
+                </div>
+            </div>
+            <div class="intro-image">
+                <img src="https://placehold.co/400x300/3B82F6/FFFFFF/png?text=Electronics+Projects" alt="Electronics Projects">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Project Categories -->
+<section class="project-categories">
+    <div class="container">
+        <h2 class="section-title">Project Categories</h2>
+        <div class="categories-grid">
+            <div class="category-card" data-category="arduino">
+                <div class="category-icon">🔌</div>
+                <h3>Arduino Projects</h3>
+                <p>Microcontrollers, sensors, shields, and components for Arduino-based projects</p>
+            </div>
+            <div class="category-card" data-category="iot">
+                <div class="category-icon">🌐</div>
+                <h3>IoT Projects</h3>
+                <p>WiFi, Bluetooth modules, and sensors for Internet of Things applications</p>
+            </div>
+            <div class="category-card" data-category="sensors">
+                <div class="category-icon">📡</div>
+                <h3>Sensor Projects</h3>
+                <p>Temperature, motion, light, sound, and other sensors for detection projects</p>
+            </div>
+            <div class="category-card" data-category="robotics">
+                <div class="category-icon">🤖</div>
+                <h3>Robotics</h3>
+                <p>Motors, drivers, chassis, and controllers for robotics projects</p>
+            </div>
+            <div class="category-card" data-category="power">
+                <div class="category-icon">🔋</div>
+                <h3>Power Systems</h3>
+                <p>Batteries, solar panels, voltage regulators, and power management</p>
+            </div>
+            <div class="category-card" data-category="basic">
+                <div class="category-icon">💡</div>
+                <h3>Basic Electronics</h3>
+                <p>Resistors, capacitors, LEDs, breadboards, and fundamental components</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Components Section -->
+<section class="components-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Electronic Components</h2>
+            <div class="components-filter">
+                <button class="filter-btn active" data-filter="all">All Components</button>
+                <button class="filter-btn" data-filter="arduino">Arduino</button>
+                <button class="filter-btn" data-filter="sensors">Sensors</button>
+                <button class="filter-btn" data-filter="modules">Modules</button>
+                <button class="filter-btn" data-filter="basic">Basic</button>
+            </div>
+        </div>
+
+        <div class="components-grid" id="components-container">
+            <!-- Arduino Components -->
+            <div class="component-card" data-category="arduino" data-price="350">
+                <div class="component-image">
+                    <img src="https://placehold.co/300x200/3B82F6/FFFFFF/png?text=Arduino+Uno" alt="Arduino Uno">
+                </div>
+                <div class="component-info">
+                    <h3>Arduino Uno R3</h3>
+                    <p class="component-desc">ATmega328P microcontroller board</p>
+                    <div class="component-meta">
+                        <span class="price">₹350</span>
+                        <span class="stock in-stock">In Stock</span>
+                    </div>
+                    <button class="btn btn-enquire" data-product="Arduino Uno R3">Enquire Now</button>
+                </div>
+            </div>
+
+            <div class="component-card" data-category="arduino" data-price="120">
+                <div class="component-image">
+                    <img src="https://placehold.co/300x200/3B82F6/FFFFFF/png?text=ESP8266" alt="ESP8266">
+                </div>
+                <div class="component-info">
+                    <h3>ESP8266 WiFi Module</h3>
+                    <p class="component-desc">WiFi module for IoT projects</p>
+                    <div class="component-meta">
+                        <span class="price">₹120</span>
+                        <span class="stock in-stock">In Stock</span>
+                    </div>
+                    <button class="btn btn-enquire" data-product="ESP8266 WiFi Module">Enquire Now</button>
+                </div>
+            </div>
+
+            <!-- Sensor Components -->
+            <div class="component-card" data-category="sensors" data-price="85">
+                <div class="component-image">
+                    <img src="https://placehold.co/300x200/3B82F6/FFFFFF/png?text=DHT11" alt="DHT11 Sensor">
+                </div>
+                <div class="component-info">
+                    <h3>DHT11 Temperature Sensor</h3>
+                    <p class="component-desc">Digital temperature and humidity sensor</p>
+                    <div class="component-meta">
+                        <span class="price">₹85</span>
+                        <span class="stock in-stock">In Stock</span>
+                    </div>
+                    <button class="btn btn-enquire" data-product="DHT11 Sensor">Enquire Now</button>
+                </div>
+            </div>
+
+            <div class="component-card" data-category="sensors" data-price="65">
+                <div class="component-image">
+                    <img src="https://placehold.co/300x200/3B82F6/FFFFFF/png?text=HC-SR04" alt="HC-SR04 Sensor">
+                </div>
+                <div class="component-info">
+                    <h3>HC-SR04 Ultrasonic Sensor</h3>
+                    <p class="component-desc">Distance measuring sensor</p>
+                    <div class="component-meta">
+                        <span class="price">₹65</span>
+                        <span class="stock low-stock">Low Stock</span>
+                    </div>
+                    <button class="btn btn-enquire" data-product="HC-SR04 Sensor">Enquire Now</button>
+                </div>
+            </div>
+
+            <!-- Module Components -->
+            <div class="component-card" data-category="modules" data-price="180">
+                <div class="component-image">
+                    <img src="https://placehold.co/300x200/3B82F6/FFFFFF/png?text=Relay+Module" alt="Relay Module">
+                </div>
+                <div class="component-info">
+                    <h3>5V Relay Module</h3>
+                    <p class="component-desc">4-channel relay module</p>
+                    <div class="component-meta">
+                        <span class="price">₹180</span>
+                        <span class="stock in-stock">In Stock</span>
+                    </div>
+                    <button class="btn btn-enquire" data-product="5V Relay Module">Enquire Now</button>
+                </div>
+            </div>
+
+            <div class="component-card" data-category="modules" data-price="220">
+                <div class="component-image">
+                    <img src="https://placehold.co/300x200/3B82F6/FFFFFF/png?text=Motor+Driver" alt="Motor Driver">
+                </div>
+                <div class="component-info">
+                    <h3>L298N Motor Driver</h3>
+                    <p class="component-desc">Dual H-bridge motor controller</p>
+                    <div class="component-meta">
+                        <span class="price">₹220</span>
+                        <span class="stock in-stock">In Stock</span>
+                    </div>
+                    <button class="btn btn-enquire" data-product="L298N Motor Driver">Enquire Now</button>
+                </div>
+            </div>
+
+            <!-- Basic Components -->
+            <div class="component-card" data-category="basic" data-price="10">
+                <div class="component-image">
+                    <img src="https://placehold.co/300x200/3B82F6/FFFFFF/png?text=LEDs" alt="LED Pack">
+                </div>
+                <div class="component-info">
+                    <h3>LED Pack (10 pieces)</h3>
+                    <p class="component-desc">5mm LEDs - multi-color</p>
+                    <div class="component-meta">
+                        <span class="price">₹10</span>
+                        <span class="stock in-stock">In Stock</span>
+                    </div>
+                    <button class="btn btn-enquire" data-product="LED Pack">Enquire Now</button>
+                </div>
+            </div>
+
+            <div class="component-card" data-category="basic" data-price="25">
+                <div class="component-image">
+                    <img src="https://placehold.co/300x200/3B82F6/FFFFFF/png?text=Resistors" alt="Resistor Pack">
+                </div>
+                <div class="component-info">
+                    <h3>Resistor Kit</h3>
+                    <p class="component-desc">Assorted resistors (100 pieces)</p>
+                    <div class="component-meta">
+                        <span class="price">₹25</span>
+                        <span class="stock in-stock">In Stock</span>
+                    </div>
+                    <button class="btn btn-enquire" data-product="Resistor Kit">Enquire Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Project Kits Section -->
+<section class="kits-section">
+    <div class="container">
+        <h2 class="section-title">Project Kits</h2>
+        <div class="kits-grid">
+            <div class="kit-card">
+                <div class="kit-image">
+                    <img src="https://placehold.co/300x200/3B82F6/FFFFFF/png?text=Line+Follower+Kit" alt="Line Follower Kit">
+                </div>
+                <div class="kit-info">
+                    <h3>Line Follower Robot Kit</h3>
+                    <p class="kit-desc">Complete kit with sensors, chassis, motors, and instructions</p>
+                    <div class="kit-meta">
+                        <span class="price">₹1,200</span>
+                        <span class="stock in-stock">In Stock</span>
+                    </div>
+                    <button class="btn btn-enquire" data-product="Line Follower Kit">Enquire Now</button>
+                </div>
+            </div>
+
+            <div class="kit-card">
+                <div class="kit-image">
+                    <img src="https://placehold.co/300x200/3B82F6/FFFFFF/png?text=Home+Automation+Kit" alt="Home Automation Kit">
+                </div>
+                <div class="kit-info">
+                    <h3>Home Automation Kit</h3>
+                    <p class="kit-desc">Relays, Bluetooth module, and components for home automation</p>
+                    <div class="kit-meta">
+                        <span class="price">₹1,800</span>
+                        <span class="stock in-stock">In Stock</span>
+                    </div>
+                    <button class="btn btn-enquire" data-product="Home Automation Kit">Enquire Now</button>
+                </div>
+            </div>
+
+            <div class="kit-card">
+                <div class="kit-image">
+                    <img src="https://placehold.co/300x200/3B82F6/FFFFFF/png?text=Weather+Station+Kit" alt="Weather Station Kit">
+                </div>
+                <div class="kit-info">
+                    <h3>Weather Station Kit</h3>
+                    <p class="kit-desc">Temperature, humidity, and pressure sensors with display</p>
+                    <div class="kit-meta">
+                        <span class="price">₹1,500</span>
+                        <span class="stock low-stock">Low Stock</span>
+                    </div>
+                    <button class="btn btn-enquire" data-product="Weather Station Kit">Enquire Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Project Guidance Section -->
+<section class="guidance-section">
+    <div class="container">
+        <div class="guidance-content">
+            <div class="guidance-text">
+                <h2>Need Project Guidance?</h2>
+                <p>Our experienced technicians can help you with:</p>
+                <ul>
+                    <li>Circuit design and troubleshooting</li>
+                    <li>Component selection</li>
+                    <li>Programming assistance</li>
+                    <li>Project documentation</li>
+                    <li>Debugging and testing</li>
+                </ul>
+                <p>We've helped hundreds of students successfully complete their academic projects.</p>
+                <a href="#project-request" class="btn btn-primary">Request Project Help</a>
+            </div>
+            <div class="guidance-image">
+                <img src="https://placehold.co/400x300/3B82F6/FFFFFF/png?text=Project+Guidance" alt="Project Guidance">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Project Request Form -->
+<section id="project-request" class="project-request">
+    <div class="container">
+        <h2 class="section-title">Project Assistance Request</h2>
+        <div class="request-form">
+            <form id="project-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="project-name">Your Name</label>
+                        <input type="text" id="project-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="project-phone">Phone Number</label>
+                        <input type="tel" id="project-phone" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="project-email">Email Address</label>
+                    <input type="email" id="project-email">
+                </div>
+                
+                <div class="form-group">
+                    <label for="project-college">College/University</label>
+                    <input type="text" id="project-college">
+                </div>
+                
+                <div class="form-group">
+                    <label for="project-type">Project Type</label>
+                    <select id="project-type" required>
+                        <option value="">Select project type</option>
+                        <option value="arduino">Arduino Project</option>
+                        <option value="iot">IoT Project</option>
+                        <option value="robotics">Robotics</option>
+                        <option value="sensors">Sensor-based Project</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="project-desc">Project Description</label>
+                    <textarea id="project-desc" rows="4" required placeholder="Describe your project requirements, components needed, and any specific challenges you're facing..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="project-deadline">Project Deadline</label>
+                    <input type="date" id="project-deadline">
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Submit Request</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section">
+    <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h3>Do you provide complete project kits?</h3>
+                <p>Yes, we offer complete project kits with all necessary components, instructions, and sometimes even pre-written code for common projects.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Can I get guidance for my college project?</h3>
+                <p>Absolutely! Our technicians have experience helping students with academic projects and can provide guidance on circuit design, component selection, and troubleshooting.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Do you offer discounts for students?</h3>
+                <p>Yes, we offer special student pricing on components and project kits. Just show your student ID to avail the discount.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>What if I need a component that's not in stock?</h3>
+                <p>We can usually source specialized components within a few days. Just let us know what you need, and we'll check availability.</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{% static 'js/projects/projects.js' %}"></script>
+{% endblock %}
