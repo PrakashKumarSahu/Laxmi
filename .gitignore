@@ -23,12 +23,13 @@ media/
 
 # Docker volumes
 postgres_data/
+postgres_data_prod/
 
 # Node
 frontend/node_modules/
 frontend/dist/
 
-# IDE
+# IDE & Editor
 .vscode/
 .idea/
 *.swp
@@ -37,6 +38,9 @@ frontend/dist/
 # OS
 .DS_Store
 Thumbs.db
+
+# AI Assistant internal metadata
+.antigravity/
 
 # Misc
 pk.txt
