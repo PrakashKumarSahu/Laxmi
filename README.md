@@ -1,141 +1,161 @@
-# 📌 Project: Laxmi Electronics and Electricals
+# ⚡ Laxmi Electronics and Electricals
 
-**Location:** Near Durga Chowk, Gudhiyari, Raipur, Chhattisgarh  
+> **Location:** Near Durga Chowk, Gudhiyari, Raipur, Chhattisgarh 492009  
+> **Phone / WhatsApp:** +91 98261 00000  
+> **Email:** laxmielectronics.raipur@gmail.com
 
----
-
-## 1. 🏪 Business Overview
-**Laxmi Electronics and Electricals** is a local electronics service and retail shop that offers:
-
-- **Repair Services** – Mixer, Cooler, LED TV, Iron, Fan, Induction cooker, etc.  
-- **Student Projects** – Arduino & DIY electronics projects, components, and project-building assistance.  
-- **Wholesale Products** – DTH Receivers in bulk.  
-- **Retail Products** – New LED TVs, Mixers, Fans, Induction cookers, and other electronics.  
-- **Refurbished Products** – Repaired items resold at affordable prices.  
+Full-stack web platform for **Laxmi Electronics and Electricals** — a trusted local shop offering home appliance repairs, wholesale DTH receivers, new and refurbished electronics, and student IoT/Arduino project support.
 
 ---
 
-## 2. 🎯 Website Goals
-- Showcase all services and products in a clean and professional way.  
-- Allow customers to enquire about repairs, products, and projects.  
-- Highlight wholesale DTH business.  
-- Provide credibility and easy contact info (location, WhatsApp, phone).  
-- *(Optional)* Add e-commerce features like cart and online payment.  
+## Project Structure
+
+```
+Laxmi/
+├── backend/                     # Django 5 + DRF API
+│   ├── laxmi/                   # Project config (settings, urls, wsgi)
+│   │   ├── settings.py
+│   │   ├── urls.py
+│   │   └── throttling.py
+│   ├── accounts/                # User auth (signup/login)
+│   ├── home/                    # Contact messages
+│   ├── products/                # New / Refurbished / Wholesale DTH products
+│   ├── projects/                # Student IoT projects & components
+│   ├── services/                # Appliance repair services & enquiries
+│   ├── manage.py
+│   ├── seed_data.py             # Seeds initial shop data on first run
+│   ├── requirements.txt
+│   └── Dockerfile
+├── frontend/                    # React 18 + Vite SPA
+│   ├── src/
+│   │   ├── components/          # Navbar, Footer, RepairModal, PurchaseModal, ProjectModal
+│   │   ├── pages/               # Home, Services, Projects, Products, About, Contact
+│   │   ├── api.js               # Axios client with mock fallbacks
+│   │   └── index.css            # Global design system (dark glassmorphism)
+│   ├── .env.example
+│   ├── vite.config.js
+│   └── Dockerfile
+├── .env.prod.example            # Template for production secrets
+├── .gitignore
+├── docker-compose.yml           # Development (SQLite dev option + Docker Postgres)
+├── docker-compose.prod.yml      # Production (Gunicorn + Nginx + Postgres)
+└── .github/
+    └── workflows/ci.yml         # GitHub Actions — backend tests + frontend build
+```
 
 ---
 
-## 3. 📂 Website Structure (Sitemap)
+## Tech Stack
 
-**Navigation Menu:**
-- Home  
-- Services (Repairing details)  
-- Projects (Student/Arduino projects + components)  
-- Products  
-  - New Items (LED TVs, Mixers, Fans, etc.)  
-  - Refurbished Items (Repaired and resold items)  
-  - Wholesale (DTH Receivers)  
-- About Us  
-- Contact  
+| Layer | Technology |
+|---|---|
+| Backend | Python 3.11, Django 5.2, Django REST Framework |
+| Database | PostgreSQL 15 (Docker) / SQLite 3 (local fallback) |
+| Frontend | React 18, Vite, React Router DOM v6, Lucide React |
+| Containerization | Docker Compose (3 services) |
+| Web Server | Gunicorn (API) + Nginx (React SPA) |
+| CI/CD | GitHub Actions |
 
 ---
 
-## 4. 📑 Pages & Features
+## Running the Project
 
-### 🔹 Home Page
-- Shop name, logo, tagline.  
-- Brief about services, projects, and products.  
-- Carousel of featured products (DTH receivers, LED TVs).  
-- Location map (Google Maps embed).  
+### Option 1 — Docker Compose (all 3 services together)
 
-### 🔹 Services Page
-- List of repair services (Mixer, Cooler, TV, Fan, etc.).  
-- Each service → description, example problems, price range (optional).  
+```bash
+# Build and start PostgreSQL, Django API, and React Nginx frontend
+docker compose up --build
+```
 
-### 🔹 Projects Page
-- Student project assistance (Arduino, IoT, Sensors).  
-- Component listing with price & stock.  
-- **"Request Project" form** for student enquiries.  
+| Service | URL |
+|---|---|
+| React Frontend | http://localhost:3000 |
+| Django REST API | http://localhost:8000/api/v1/ |
+| Django Admin | http://localhost:8000/admin/ |
+| PostgreSQL | localhost:5432 (`laxmidb`) |
 
-### 🔹 Products Page
-**Sections:**
-- New Products – LED TVs, Fans, Induction, Mixers.  
-- Refurbished Products – Repaired and resold items.  
-- Wholesale Products – DTH Receivers.  
-
-**Each product will have:**
-- Image  
-- Name  
-- Category (TV, DTH, Mixer, etc.)  
-- Condition (New / Refurbished)  
-- Price  
-- Stock availability  
-- Wholesale or Retail option  
-- **"Enquiry/Buy Now" button**  
-
-### 🔹 About Us Page
-- History of the shop.  
-- Services and product highlights.  
-- Trust-building points (local service, affordable rates, student project help).  
-
-### 🔹 Contact Page
-- Contact form (Name, Phone/Email, Message).  
-- Shop address + Google Map.  
-- WhatsApp/Call button.  
-- Business hours.  
+```bash
+# Stop all services
+docker compose down
+```
 
 ---
 
-## 5. 🛠 Backend Features (Django Admin)
-- Add/Edit/Delete **services**.  
-- Add/Edit/Delete **products** (new, refurbished, wholesale).  
-- Add/Edit/Delete **projects/components**.  
-- View all enquiries (repair, product purchase, project request).  
-- Manage stock & availability.  
+### Option 2 — Local development servers
+
+**Backend (Django)**
+
+```bash
+cd backend
+python3 -m venv ../.venv
+source ../.venv/bin/activate
+pip install -r requirements.txt
+python manage.py migrate
+python seed_data.py        # loads initial shop data
+python manage.py runserver
+```
+
+**Frontend (React + Vite)**
+
+```bash
+cd frontend
+cp .env.example .env
+npm install
+npm run dev                # http://localhost:5173
+```
 
 ---
 
-## 6. 🗂 Database Models (Draft)
+## API Reference
 
-- **Service** – (name, description, price_range)  
-- **Project** – (name, type, description, price)  
-- **Component** – (name, description, price, quantity)  
-- **Product** – (name, category, condition, description, price, stock_quantity, wholesale option, image)  
-- **ContactRequest** – (name, email/phone, message, timestamp)  
-- **PurchaseRequest** – (product, name, contact, quantity, address, timestamp)  
-- **ProjectRequest** – (project, name, contact, message, timestamp)  
-
----
-
-## 7. 🎨 Design & Styling
-- Clean, modern layout with **Bootstrap or TailwindCSS**.  
-- Responsive (mobile + desktop friendly).  
-- Product images for DTH, TVs, mixers, etc.  
-- Highlight wholesale offers in banners.  
+| Method | Endpoint | Description |
+|---|---|---|
+| GET | `/api/v1/services/` | List repair services |
+| POST | `/api/v1/services/enquiry/` | Submit repair booking (rate-limited: 5/min) |
+| GET | `/api/v1/products/` | List products (`?condition=NEW\|REFURBISHED\|WHOLESALE`) |
+| POST | `/api/v1/products/enquiry/` | Submit purchase / wholesale enquiry |
+| GET | `/api/v1/projects/` | List student project kits |
+| GET | `/api/v1/components/` | List components in stock |
+| POST | `/api/v1/projects/request/` | Submit project assistance request |
+| POST | `/api/v1/contact/` | Send a contact message |
 
 ---
 
-## 8. 🚀 Optional Features
-- E-commerce style cart & checkout (with Razorpay/Paytm).  
-- User login & order history.  
-- Reviews/Testimonials.  
-- Downloadable project PDFs.  
+## Running Tests
+
+```bash
+# Backend unit tests
+cd backend
+../.venv/bin/python manage.py test
+
+# Frontend production build check
+cd frontend
+npm run build
+
+# Validate Docker Compose config
+docker compose config
+docker compose -f docker-compose.prod.yml config
+```
 
 ---
 
-## 9. 📌 Tech Stack
-- **Backend:** Django (Python)  
-- **Frontend:** Django Templates + Bootstrap/Tailwind  
-- **Database:** SQLite (local) / PostgreSQL (production)  
-- **Deployment:** PythonAnywhere / Heroku / AWS / Local VPS  
+## Production Deployment
+
+```bash
+cp .env.prod.example .env.prod   # fill in real secrets
+docker compose -f docker-compose.prod.yml up --build -d
+```
 
 ---
 
-## 10. 📝 Development Roadmap
-- **Phase 1:** Basic Django project setup with Home, Services, Projects, Products, Contact.  
-- **Phase 2:** Add admin management for products/services.  
-- **Phase 3 (Optional):** E-commerce cart & online payment.  
-- **Phase 4:** Deploy to live server.  
+## Business Overview
 
----
+**Laxmi Electronics and Electricals** is a local shop in Gudhiyari, Raipur offering:
 
-📍 *This README serves as a complete project blueprint for developers or AI tools to build the website for Laxmi Electronics and Electricals.*
+- **Appliance Repairs** — Mixer, Cooler, LED TV, Fan, Induction cooker, Iron box
+- **Student Project Support** — Arduino, IoT kits, sensors, components, guidance
+- **Wholesale DTH** — DD Free Dish FTA satellite receivers in bulk
+- **New Electronics** — Smart LED TVs, Induction cooktops, Ceiling fans
+- **Refurbished Items** — Fully serviced appliances with shop warranty
+
+**Business Hours:** Mon–Sat 9:30 AM – 8:30 PM | Sun 10:00 AM – 4:00 PM

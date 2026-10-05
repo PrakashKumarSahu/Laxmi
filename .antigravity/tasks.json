@@ -1,0 +1,101 @@
+{
+  "project": "Laxmi Electronics and Electricals",
+  "version": "1.0.0",
+  "phases": [
+    {
+      "id": 1,
+      "name": "Phase 01: Analysis",
+      "file": ".antigravity/prompts/phase-01-analysis.md",
+      "status": "completed",
+      "tasks": [
+        "Audit existing project files and database schema requirement",
+        "Define models for services, products, projects, components, enquiries",
+        "Establish API contract between Django DRF and React Frontend"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Phase 02: Scaffolding & Docker",
+      "file": ".antigravity/prompts/phase-02-scaffolding-docker.md",
+      "status": "in_progress",
+      "tasks": [
+        "Configure requirements.txt / dependencies (Django, djangorestframework, django-cors-headers)",
+        "Create Dockerfile and docker-compose.yml for backend",
+        "Configure CORS settings and static/media configurations in settings.py"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Phase 03: Backend Models & Admin",
+      "file": ".antigravity/prompts/phase-03-backend-models-admin.md",
+      "status": "pending",
+      "tasks": [
+        "Implement Service model in services/models.py",
+        "Implement Product model in products/models.py",
+        "Implement Project and Component models in projects/models.py",
+        "Implement Enquiry models in home/models.py",
+        "Register all models in respective admin.py files with list_display, search_fields, list_filter",
+        "Generate and execute Django migrations"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Phase 04: DRF API & Throttling",
+      "file": ".antigravity/prompts/phase-04-drf-api-throttling.md",
+      "status": "pending",
+      "tasks": [
+        "Create serializers for all models in respective apps",
+        "Create DRF ViewSets / APIViews for services, products, projects, enquiries",
+        "Implement throttling for enquiry POST endpoints",
+        "Register API endpoints in laxmi/urls.py under /api/v1/"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Phase 05: Frontend Setup & Routing",
+      "file": ".antigravity/prompts/phase-05-frontend-setup-routing.md",
+      "status": "pending",
+      "tasks": [
+        "Initialize React frontend with Vite in frontend/ directory",
+        "Setup Axios API client with base URL configuration",
+        "Setup React Router DOM for SPA navigation",
+        "Create responsive Navbar and Footer components with shop branding"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Phase 06: Frontend Pages & Forms",
+      "file": ".antigravity/prompts/phase-06-frontend-pages-forms.md",
+      "status": "pending",
+      "tasks": [
+        "Build Home page with banner, featured items, service grid, location section",
+        "Build Services page with repair enquiry modal",
+        "Build Projects page with component store & custom project request form",
+        "Build Products page with category/condition filters & purchase modal",
+        "Build About Us & Contact pages with interactive submission"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Phase 07: SEO, Accessibility & Mobile",
+      "file": ".antigravity/prompts/phase-07-seo-accessibility-mobile.md",
+      "status": "pending",
+      "tasks": [
+        "Add meta tags, page titles, and semantic HTML structure",
+        "Ensure full mobile responsiveness and touch accessibility",
+        "Add toast notifications for form submissions and loading spinners"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Phase 08: Docker Production, CI/CD & Audit",
+      "file": ".antigravity/prompts/phase-08-docker-prod-cicd-audit.md",
+      "status": "pending",
+      "tasks": [
+        "Create production Docker Compose setup with Nginx",
+        "Create GitHub Actions CI workflow in .github/workflows/ci.yml",
+        "Verify backend API and frontend build execution"
+      ]
+    }
+  ]
+}

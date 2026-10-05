@@ -1,0 +1,54 @@
+services:
+  # 1. PostgreSQL DBMS Container
+  db:
+    image: postgres:15-alpine
+    container_name: laxmi_db
+    restart: always
+    environment:
+      POSTGRES_DB: laxmidb
+      POSTGRES_USER: laxmiuser
+      POSTGRES_PASSWORD: laxmipassword
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U laxmiuser -d laxmidb"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # 2. Django REST Framework Backend Container
+  backend:
+    build: ./backend
+    container_name: laxmi_backend
+    restart: always
+    command: sh -c "python manage.py migrate && python seed_data.py && python manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - ./backend:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - DEBUG=1
+      - SECRET_KEY=django-insecure-asnm_h_x_y2a_s_8c_3gom_vk1_gnpk586g_3_z0_
+      - POSTGRES_DB=laxmidb
+      - POSTGRES_USER=laxmiuser
+      - POSTGRES_PASSWORD=laxmipassword
+      - POSTGRES_HOST=db
+      - POSTGRES_PORT=5432
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # 3. React SPA Frontend Container
+  frontend:
+    build: ./frontend
+    container_name: laxmi_frontend
+    restart: always
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
